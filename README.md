@@ -12,13 +12,12 @@
 - Based on the the results generated from the confusion matrix:
   - The likelihood of this model getting the loan being healthy result correctly (loan_status = 0) is 99.8%: 18655 / (18655 + 36)
   <img width="426" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/467df348-6197-4c55-9d9f-ddec67381349">
+
   - The likelihood of this modelgetting the loan being unhealthy result correctly (loan_status = 1) is 84.1%: 583 / (110 + 583)
   - The possibility of getting the loan being healthy result correctly within total number of loans actually being healthy (True positives and false negatives) (aka. recall for loan_status = 0) is 99.4%: (18655 / (18655 + 110)
   - The possibility of getting the loan being unhealthy result correctly within total number of loans actually being unhealthy (True negatives and false positivies) (aka. recall for loan_status = 1) is 94.2%: 583 / (36 + 583)
   - Overall, the accuracy of the model of predicting status of creditworthiness of borrowers based on loan status is 99.2%: (18655 + 583) / (18655 + 583 + 36 + 110).
-  
-
-  <img width="404" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/34feda4d-cf15-4797-8634-937e7d2aaa00">
+<img width="404" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/34feda4d-cf15-4797-8634-937e7d2aaa00">
 
 - How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
 - A value of 0 in the “loan_status” column means that the loan is healthy. A value of 1 means that the loan has a high risk of defaulting.
