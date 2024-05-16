@@ -23,6 +23,10 @@
   - The possibility of getting the loan being high-risk result correctly within total number of loans actually being unhealthy (True negatives and false positivies) (aka. Recall for loan_status = 1) is 94.2%: 583 / (36 + 583)
   - Overall, the accuracy of the model of predicting status of creditworthiness of borrowers based on loan status is 99.2%: (18655 + 583) / (18655 + 583 + 36 + 110).
 
+    <img width="625" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/01749a57-8431-41e2-9747-06eb22102b31">
+
+    
+
 ## Results
 
 Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
