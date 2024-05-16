@@ -11,9 +11,8 @@
 # Findings and Analysis 
 - Data context: a value of 0 in the “loan_status” column means that the loan is healthy, and a value of 1 means that the loan has a high risk of defaulting.
 - Based on the the results generated from the confusion matrix:
-
-     <img width="426" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/467df348-6197-4c55-9d9f-ddec67381349">
-
+  - The confusion matrix snapshot:
+         <img width="426" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/467df348-6197-4c55-9d9f-ddec67381349"> 
   - The likelihood of this model getting the loan being healthy result correctly (loan_status = 0) is 99.8%: 18655 / (18655 + 36)
   - The likelihood of this modelgetting the loan being high-risk result correctly (loan_status = 1) is 84.1%: 583 / (110 + 583)
   - The possibility of getting the loan being healthy result correctly within total number of loans actually being healthy (True positives and false negatives) (aka. recall for loan_status = 0) is 99.4%: (18655 / (18655 + 110)
