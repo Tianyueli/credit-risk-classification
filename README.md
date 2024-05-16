@@ -1,24 +1,52 @@
 # credit-risk-classification
 
-# Overview 
+# Overview of the Analysis
 - This project, I used various techniques to train and evaluate a model based on loan risk. I used a dataset of historical lending activity from a peer-to-peer lending services company to build a model that can identify the creditworthiness of borrowers.
+- The purpose of the model was to predict the loan status of borrowers and whether they are acurractely predicted as healthy or high-risk. 
+- The dataset contains key attributes to assist forming and training of the model:
+  - loan_size, interest_rate,	borrower_income, debt_to_income,	num_of_accounts, derogatory_marks,	total_debt,	loan_status
   
 # Model building & Prediction
-- I created a dataframe using the original data and separated y and X by "loan_status" column and all remaining attribute columns. I then splitted the data into training and testing sets and created a Logistic Regression Model with the original data. 
+- I created a dataframe using the original data and separated y and X by "loan_status" column and all remaining attribute columns. I then splitted the data into training and testing sets and created a Logistic Regression Model with the original data.
 - Next I made predictions for testing data and calculated for the accuracy of model using testing data: accuracy result 0.992.
 - I then evaluated the model’s performance by generating a confusion matrix and a classification report. Please see detailed analysis and findings below.
 
 # Findings and Analysis 
-- Based on the the results generated from the confusion matrix, the likelihood of this model getting the loan being healthy result correctly (loan_status = 0) is 99.4%: 583 / (110 + 583)
-  <img width="426" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/467df348-6197-4c55-9d9f-ddec67381349">
+- Data context: a value of 0 in the “loan_status” column means that the loan is healthy, and a value of 1 means that the loan has a high risk of defaulting.
+- Based on the the results generated from the Logistic Regression model:
+  - The confusion matrix snapshot:
 
-  <img width="404" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/34feda4d-cf15-4797-8634-937e7d2aaa00">
+    <img width="426" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/467df348-6197-4c55-9d9f-ddec67381349"> 
+  - The likelihood of this model getting the loan being healthy result correctly (aka. Precision for loan_status = 0) is 99.8%: 18655 / (18655 + 36)
+  - The likelihood of this modelgetting the loan being high-risk result correctly (aka. Precision for loan_status = 1) is 84.1%: 583 / (110 + 583)
+  - The possibility of getting the loan being healthy result correctly within total number of loans actually being healthy (True positives and false negatives) (aka. Recall for loan_status = 0) is 99.4%: (18655 / (18655 + 110)
+  - The possibility of getting the loan being high-risk result correctly within total number of loans actually being unhealthy (True negatives and false positivies) (aka. Recall for loan_status = 1) is 94.2%: 583 / (36 + 583)
+  - Overall, the accuracy of the model of predicting status of creditworthiness of borrowers based on loan status is 99.2%: (18655 + 583) / (18655 + 583 + 36 + 110).
 
-- How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
-- A value of 0 in the “loan_status” column means that the loan is healthy. A value of 1 means that the loan has a high risk of defaulting.
-- Write a Credit Risk Analysis Report
+    <img width="625" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/01749a57-8431-41e2-9747-06eb22102b31">
 
-# Data Reference
+    
+
+## Results
+
+Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
+
+* Machine Learning Model 1:
+    * Description of Model 1 Accuracy, Precision, and Recall scores.
+
+
+# Summary
+- In conclusion, this logistic regression model obtained a high accuracy of 99.2% when predicting the creditworthiness of borrowers based on the health of their loan status.
+- Summarized view please see classification report below:
+
+    <img width="407" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/40d1c642-635d-458e-9d89-0fe989a93786">
+    
+- Furthermore, here's a brief  evaluation of different models taken into consideration based on their performance:
+    
+    * Which one seems to perform best? How do you know it performs best?
+      - If time allows, I would also build a Random Forest model to cross compare the accuracy and evaluate if one model might further enhance the accuracy of prediction. However, due to the current logistic model arrived at 99% accuracy, this appears to be an effective and useful model based on the data provided.
+    * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+      - The performance of the model does depend on the problem we are trying to solve. For the current analysis, I'm trying to identify the creditworthiness to narrow down borrowers. Therefore, status_loan = 0 (aka. healthy loan status) is the primary target I'm aiming to predict. On the other hand, if a different project evaluates effectiveness of a new pharmaceutical drug, where 0 is negative result and 1 is postive improvement in health, then it might be more benefitial to aim the analysis on the prediction of 1.
 
 
 # References
