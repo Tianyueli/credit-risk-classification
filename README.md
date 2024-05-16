@@ -4,7 +4,7 @@
 - This project, I used various techniques to train and evaluate a model based on loan risk. I used a dataset of historical lending activity from a peer-to-peer lending services company to build a model that can identify the creditworthiness of borrowers.
   
 # Model building & Prediction
-- I created a dataframe using the original data and separated y and X by "loan_status" column and all remaining attribute columns. I then splitted the data into training and testing sets and created a Logistic Regression Model with the original data.
+- I created a dataframe using the original data and separated y and X by "loan_status" column and all remaining attribute columns. I then splitted the data into training and testing sets and created a Logistic Regression Model with the original data. 
 - Next I made predictions for testing data and calculated for the accuracy of model using testing data: accuracy result 0.992.
 - I then evaluated the model’s performance by generating a confusion matrix and a classification report. Please see detailed analysis and findings below.
 
