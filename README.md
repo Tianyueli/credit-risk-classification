@@ -40,17 +40,13 @@ Using bulleted lists, describe the accuracy scores and the precision and recall 
 - Summarized view please see classification report below:
 
     <img width="407" alt="image" src="https://github.com/Tianyueli/credit-risk-classification/assets/42381263/40d1c642-635d-458e-9d89-0fe989a93786">
-
-
-    ## Summary
     
-    Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
+- Furthermore, here's a brief  evaluation of different models taken into consideration based on their performance:
     
     * Which one seems to perform best? How do you know it performs best?
+      - If time allows, I would also build a Random Forest model to cross compare the accuracy and evaluate if one model might further enhance the accuracy of prediction. However, due to the current logistic model arrived at 99% accuracy, this appears to be an effective and useful model based on the data provided.
     * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-    If you do not recommend any of the models, please justify your reasoning.
-
+      - The performance of the model does depend on the problem we are trying to solve. For the current analysis, I'm trying to identify the creditworthiness to narrow down borrowers. Therefore, status_loan = 0 (aka. healthy loan status) is the primary target I'm aiming to predict. On the other hand, if a different project evaluates effectiveness of a new pharmaceutical drug, where 0 is negative result and 1 is postive improvement in health, then it might be more benefitial to aim the analysis on the prediction of 1.
 
 
 # References
